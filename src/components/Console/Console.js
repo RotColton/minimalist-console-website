@@ -7,6 +7,12 @@ import HostName from './HostName';
 const Console = () => {
  
   const [log, setLog] = useState('');
+  const [showInput, setShowInput] = useState(false);
+  const [serverResponse, setServerResponse] = useState('');
+
+  const handleCommandResponse = (response) => {
+    setServerResponse(response);
+  };
  
   useEffect(() => {
     let index = 0;
@@ -17,6 +23,7 @@ const Console = () => {
         index++;
       } else {
         clearInterval(typeInterval);
+        setShowInput(true);
       }
     },); // Ajusta la velocidad de escritura
 
@@ -35,14 +42,15 @@ const Console = () => {
       </div>
       <div className="console" >
         <div style={{ display: 'flex', alignItems: 'center' }}>
-        <HostName />
-          
+        <HostName />          
         </div>
         {log && (
           <div style={{ whiteSpace: 'pre-wrap', marginTop: '1em' }}>{log}</div>
         )}
-        <ConsoleInput /> {/* Utilizamos el componente ConsoleInput */}
-        
+        {showInput && <ConsoleInput onCommandResponse={handleCommandResponse} />} 
+        {serverResponse && (
+          <div style={{ whiteSpace: 'pre-wrap', marginTop: '1em' }}>{serverResponse}</div>
+        )}
         <p>&nbsp;</p>
         <p>&nbsp;</p>
         <p>&nbsp;</p>
