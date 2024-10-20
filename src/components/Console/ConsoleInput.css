@@ -1,0 +1,17 @@
+.console-input-container {
+    display: flex;
+    align-items: center;
+    margin-top: 1em;
+  }
+  
+  .console-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #6cb714;
+    width: 100%;
+    caret-color: #6cb714;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+  }
+  
