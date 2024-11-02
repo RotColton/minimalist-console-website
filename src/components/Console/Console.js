@@ -8,10 +8,11 @@ const Console = () => {
  
   const [log, setLog] = useState('');
   const [showInput, setShowInput] = useState(false);
-  const [serverResponse, setServerResponse] = useState('');
+  const [commandsLog, setCommandsLog] = useState([]); // Historial de comandos y respuestas
 
   const handleCommandResponse = (response) => {
-    setServerResponse(response);
+    setCommandsLog((prevLog) => [...prevLog, `rot@spacehost:~# ${response}`]);
+    setShowInput(true); // Mostrar el input después de la respuesta
   };
  
   useEffect(() => {
@@ -42,15 +43,15 @@ const Console = () => {
       </div>
       <div className="console" >
         <div style={{ display: 'flex', alignItems: 'center' }}>
-        <HostName />          
+          <HostName />          
         </div>
         {log && (
           <div style={{ whiteSpace: 'pre-wrap', marginTop: '1em' }}>{log}</div>
         )}
+        {commandsLog.map((entry, index) => (
+          <div key={index} style={{ whiteSpace: 'pre-wrap', marginTop: '1em' }}>{entry}</div>
+        ))}
         {showInput && <ConsoleInput onCommandResponse={handleCommandResponse} />} 
-        {serverResponse && (
-          <div style={{ whiteSpace: 'pre-wrap', marginTop: '1em' }}>{serverResponse}</div>
-        )}
         <p>&nbsp;</p>
         <p>&nbsp;</p>
         <p>&nbsp;</p>

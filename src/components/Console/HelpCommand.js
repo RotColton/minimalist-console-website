@@ -5,6 +5,7 @@ Description:
     This tool provides information about my professional profile, including skills, experience, resume, and relevant links.
 
 List of parameters:
+
      -s         skills              Displays available skills.
      -e         experience          Displays accumulated experience.
      -r         resume              Displays the resume.
@@ -13,16 +14,9 @@ List of parameters:
      -g         github              Displays the link to my GitHub repository.
 
      -h         help                Displays this help message.
+     -clear     clear               Clears the console.        
 
-Examples:
-    skills
-    -s
-    about me
-    -a
-    github
-    -g
-    experience
-    -e`
+`
   );
 };
 

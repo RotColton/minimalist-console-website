@@ -13,7 +13,7 @@ body {
 }
 
 .container {
-  width: 80%;
+  width: 90%;
   max-width: 900px;
   text-align: left;
 }
@@ -21,7 +21,7 @@ body {
 .console-container {
   position: relative;
   width: 80%; /* Ajustar el ancho de la consola para que sea más pequeño */
-  max-width: 880px; /* Reducir aún más el tamaño máximo de la consola */
+  max-width: 1500px; /* Reducir aún más el tamaño máximo de la consola */
   margin: 0 auto; /* Centramos la consola horizontalmente */
   border: 1px solid #999;
   border-radius: 10px;
