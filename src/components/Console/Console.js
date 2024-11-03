@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Console.css';  // Para los estilos
+import './style/Console.css';
 import ConsoleInput from './ConsoleInput';
 import InitialLog from './InitialLog';
 import HostName from './HostName';

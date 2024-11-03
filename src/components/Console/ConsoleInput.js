@@ -1,8 +1,7 @@
-// ConsoleInput.js actualizado
 import React, { useState } from 'react';
-import './ConsoleInput.css';
+import './style/ConsoleInput.css';
 import HostName from './HostName';
-import HelpCommand from './HelpCommand';
+import CommandHandler from './commands/CommandsHandler';
 
 const ConsoleInput = ({ onCommandResponse }) => {
   const [inputValue, setInputValue] = useState("");
@@ -13,32 +12,9 @@ const ConsoleInput = ({ onCommandResponse }) => {
 
   const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
-      processCommand(inputValue);
+      // Procesa el comando usando CommandHandler
+      CommandHandler(inputValue.trim(), onCommandResponse);
       setInputValue(""); // Limpiar el input después de enviar el comando
-    }
-  };
-
-  const processCommand = (command) => {
-    if (command === '--help' || command === '-h') {
-        onCommandResponse(HelpCommand());
-    } else {
-        sendCommandToServer(command);
-    }
-  };
-
-  const sendCommandToServer = async (command) => {
-    try {
-      const response = await fetch('http://localhost:8080/command', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ command }),
-      });
-      const data = await response.json();
-      onCommandResponse(data.response);
-    } catch (error) {
-      console.error('Error al enviar el comando:', error);
     }
   };
 
