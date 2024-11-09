@@ -1,5 +1,5 @@
-// CommandHandler.js
 import HelpCommand from './HelpCommand';
+import downloadFile from './DownloadCV';
 
 const CommandHandler = (command, onCommandResponse) => {
   const commands = {
@@ -7,10 +7,13 @@ const CommandHandler = (command, onCommandResponse) => {
     '-h': () => onCommandResponse(HelpCommand()),
     '-s': () => onCommandResponse("Estas son mis habilidades disponibles: [Inserta lista de habilidades aquí]"),
     '-e': () => onCommandResponse("Esta es mi experiencia acumulada: [Inserta experiencia aquí]"),
-    '-r': () => onCommandResponse("Aquí puedes ver mi resumen: [Inserta el enlace o detalles del resumen aquí]"),
+    '-r': () => {
+      downloadFile();
+      onCommandResponse("Iniciando descarga de CV..."); // Mensaje opcional para mostrar en la consola
+    },
     '-a': () => onCommandResponse("Información sobre mí: [Inserta detalles sobre ti aquí]"),
     '-c': () => onCommandResponse("Estas son mis competencias específicas: [Inserta competencias aquí]"),
-    '-g': () => onCommandResponse("Aquí está la URL de mi repositorio de GitHub: https://github.com/tuusuario/turepositorio"),
+    '-g': () => onCommandResponse("Aquí está la URL de mi repositorio de GitHub: https://github.com/RotColton"),
     '-clear': () => onCommandResponse("clear"), // Podemos manejar el clear desde el componente Console
   };
 

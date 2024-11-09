@@ -43,6 +43,5 @@ The idea was to build a minimalist yet interactive personal website 🖥️. Som
 - ⌨️ **Typing Effect for Full Messages**: Imagine it typing out entire sentences, one letter at a time—classic hacker movie style.
 - 📝 **User Input**: Maybe one day, you could even type commands. That day is not today, though. 🤣
 
-## Contact 📬
-If you're a fellow back-end dev looking to commiserate about front-end woes, or just want to say hi, you can reach me at maromidomimgo@gmail.com. 💌
+
 
