@@ -3,8 +3,8 @@
 import axios from 'axios';
 
 const downloadFile = async () => {
-  try {
-    const response = await axios.get('http://localhost:8080/download-cv', {
+  try {   
+    const response = await axios.get(`${process.env.REACT_APP_WEB_SERVICE}${process.env.REACT_APP_DOWNLOAD_RESUME}`, {
       responseType: 'blob',
     });
 

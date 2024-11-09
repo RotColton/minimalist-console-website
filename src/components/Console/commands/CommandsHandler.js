@@ -13,7 +13,7 @@ const CommandHandler = (command, onCommandResponse) => {
     },
     '-a': () => onCommandResponse("Información sobre mí: [Inserta detalles sobre ti aquí]"),
     '-c': () => onCommandResponse("Estas son mis competencias específicas: [Inserta competencias aquí]"),
-    '-g': () => onCommandResponse("Aquí está la URL de mi repositorio de GitHub: https://github.com/RotColton"),
+    '-g': () => onCommandResponse("https://github.com/RotColton"),
     '-clear': () => onCommandResponse("clear"), // Podemos manejar el clear desde el componente Console
   };
 
