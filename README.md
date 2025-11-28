@@ -44,4 +44,5 @@ The idea was to build a minimalist yet interactive personal website 🖥️. Som
 - 📝 **User Input**: Maybe one day, you could even type commands. That day is not today, though. 🤣
 
 
-
+## 🌐 Production URL
+- https://minimalist-console-website.vercel.app/

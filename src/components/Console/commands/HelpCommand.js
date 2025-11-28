@@ -12,11 +12,11 @@ List of parameters:
      -a         about me            Displays information about me.
      -c         competencies        Displays specific competencies.
      -g         github              Displays the link to my GitHub repository.
+     -l         linkedin            Displays the link to my LinkedIn profile.
 
      -h         help                Displays this help message.
-     -clear     clear               Clears the console.        
-
-`
+     -clear     clear               Clears the console.
+  `
   );
 };
 
