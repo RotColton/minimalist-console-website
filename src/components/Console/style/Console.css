@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #282c34;
+  color: white;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  text-align: left;
+}
+
+.console-container {
+  position: relative;
+  width: 80%; /* Ajustar el ancho de la consola para que sea más pequeño */
+  max-width: 1500px; /* Reducir aún más el tamaño máximo de la consola */
+  margin: 0 auto; /* Centramos la consola horizontalmente */
+  border: 1px solid #999;
+  border-radius: 10px;
+  background-color: #333;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+  z-index: 1; /* Asegura que el contenido esté encima del fondo */
+}
+
+.console-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #666;
+  padding: 8px; /* Reducir el padding para un aspecto más compacto */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.console-buttons {
+  display: flex;
+  gap: 6px; /* Reducir el espacio entre los botones */
+}
+
+.console-button {
+  width: 12px; /* Reducir el tamaño del botón */
+  height: 12px; /* Reducir el tamaño del botón */
+  border-radius: 50%;
+  background-color: #555;
+}
+
+.console-button.green {
+  background-color: #6cb714;
+}
+
+.console {
+  background-color: #000;
+  padding: 15px; /* Reducir el padding interno de la consola */
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 0.9rem; /* Reducir el tamaño de la fuente */
+  color: #6cb714; /* color de texto verde tipo consola */
+  overflow-y: auto; /* Permite el desplazamiento vertical */
+  max-height: 60vh; /* Limitar la altura máxima de la consola para hacerla más pequeña */
+  scrollbar-color: #030303 #333; /* Colores de la barra de desplazamiento */
+  scrollbar-width: thin; /* Hace la barra de desplazamiento más delgada */
+}
+
+.console::-webkit-scrollbar {
+  width: 8px;
+}
+
+.console::-webkit-scrollbar-track {
+  background: #333;
+}
+
+.console::-webkit-scrollbar-thumb {
+  background-color: #6cb714;
+  border-radius: 10px;
+}
+
+p {
+  margin: 0;
+  line-height: 1.6;
+}
