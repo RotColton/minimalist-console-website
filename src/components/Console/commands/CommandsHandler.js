@@ -30,7 +30,7 @@ const CommandHandler = (command, onCommandResponse) => {
     Java Mentor
     IT Academy
     02/2023 - Present, Barcelona
-    
+
     - Guided groups of 20 students in learning Java, Spring Boot, and professional development paradigms.
 
     - Taught advanced design concepts: SOLID, Clean Code, DDD, and Design Patterns, applying them to real projects.
@@ -57,7 +57,7 @@ const CommandHandler = (command, onCommandResponse) => {
 
     Software Developer
     Freelance
-    01/2018 - 03/2023
+    02/2018 - 03/2023
 
     - Developed and designed web applications using various technologies.
 
