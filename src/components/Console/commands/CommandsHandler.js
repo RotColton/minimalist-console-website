@@ -1,5 +1,5 @@
 import HelpCommand from './HelpCommand';
-import downloadFile from './DownloadCV';
+import redirectSiteResume from './SiteResume';
 
 const CommandHandler = (command, onCommandResponse) => {
   const commands = {
@@ -87,8 +87,8 @@ const CommandHandler = (command, onCommandResponse) => {
     ),
 
     '-r': () => {
-      downloadFile();
-      onCommandResponse("CV download..."); 
+      redirectSiteResume();
+      onCommandResponse("Redirecting to external site..."); 
     },
 
     '-a': () => onCommandResponse(

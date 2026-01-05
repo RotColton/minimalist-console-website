@@ -8,7 +8,7 @@ List of parameters:
 
      -s         skills              Displays available skills.
      -e         experience          Displays accumulated experience.
-     -r         resume              Displays the resume.
+     -r         resume              Displays the site resume on Gamma.
      -a         about me            Displays information about me.
      -c         competencies        Displays specific competencies.
      -g         github              Displays the link to my GitHub repository.
